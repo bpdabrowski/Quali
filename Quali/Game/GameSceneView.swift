@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SpriteKit
+import Combine
 
 struct GameSceneView: View {
     
@@ -17,6 +18,8 @@ struct GameSceneView: View {
         scene.currentTrack = viewModel.currentTrack
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .aspectFill
+        viewModel.setupGameOverListener(for: scene)
+        
         return scene
     }
 

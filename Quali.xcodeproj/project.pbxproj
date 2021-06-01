@@ -17,6 +17,7 @@
 		F20992652663399B00DD3B1E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20992642663399B00DD3B1E /* GameScene.swift */; };
 		F209926F2664899E00DD3B1E /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209926E2664899E00DD3B1E /* MainMenuCoordinator.swift */; };
 		F20992772665648500DD3B1E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20992762665648500DD3B1E /* GameViewModel.swift */; };
+		F24494242665CE220018391A /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24494232665CE220018391A /* GameSceneProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F20992642663399B00DD3B1E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F209926E2664899E00DD3B1E /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		F20992762665648500DD3B1E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		F24494232665CE220018391A /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				F209925F2663341E00DD3B1E /* GameSceneView.swift */,
 				F20992642663399B00DD3B1E /* GameScene.swift */,
 				F20992762665648500DD3B1E /* GameViewModel.swift */,
+				F24494232665CE220018391A /* GameSceneProtocol.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				F20992772665648500DD3B1E /* GameViewModel.swift in Sources */,
 				F2099234266332F500DD3B1E /* MainMenuCoordinatorView.swift in Sources */,
+				F24494242665CE220018391A /* GameSceneProtocol.swift in Sources */,
 				F20992602663341E00DD3B1E /* GameSceneView.swift in Sources */,
 				F209926F2664899E00DD3B1E /* MainMenuCoordinator.swift in Sources */,
 				F20992652663399B00DD3B1E /* GameScene.swift in Sources */,
