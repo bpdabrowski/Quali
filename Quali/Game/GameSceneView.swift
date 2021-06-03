@@ -13,7 +13,6 @@ struct GameSceneView: View {
     
     @ObservedObject var viewModel: GameViewModel
     @State private var showGameOverView = false
-    @Binding var rootIsActive: Bool
     
     var scene: SKScene {
         let scene = GameScene()
@@ -34,13 +33,13 @@ struct GameSceneView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
         
-        NavigationLink(destination: GameOverView(shouldPopToRootView: self.$rootIsActive), isActive: $showGameOverView) { EmptyView()
+        NavigationLink(destination: GameOverView(), isActive: $showGameOverView) { EmptyView()
         }.isDetailLink(false)
     }
 }
 
 struct GameOverView: View {
-    @Binding var shouldPopToRootView: Bool
+    @EnvironmentObject var coordinator: MainMenuCoordinator
     
     var body: some View {
         VStack {
@@ -51,7 +50,7 @@ struct GameOverView: View {
             .padding()
             .background(Color.black)
             
-            Button(action: { self.shouldPopToRootView = false }) {
+            Button(action: { self.coordinator.stacked = false }) {
                 Text("Main Menu")
             }
         }

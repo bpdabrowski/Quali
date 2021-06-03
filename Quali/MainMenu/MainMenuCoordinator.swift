@@ -14,7 +14,7 @@ class MainMenuCoordinator: ObservableObject, Identifiable {
     
     @Published var gameViewModel: GameViewModel?
     private let currentTrack = "Monaco" // TODO: Update this with the selected track.
-    @State var isShowingGameView = false
+    @Published var stacked = false
 
     // MARK: Initialization
 

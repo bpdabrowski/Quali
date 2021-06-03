@@ -10,7 +10,6 @@ import SwiftUI
 struct MainMenuCoordinatorView: View {
     
     @ObservedObject var coordinator: MainMenuCoordinator
-    @State var isActive: Bool = false
     
     init(coordinator: MainMenuCoordinator) {
         self.coordinator = coordinator
@@ -22,13 +21,14 @@ struct MainMenuCoordinatorView: View {
             
             NavigationView {
                 NavigationLink(
-                    destination: GameSceneView(viewModel: gameViewModel, rootIsActive: self.$isActive),
-                    isActive: $isActive
+                    destination: GameSceneView(viewModel: gameViewModel),
+                    isActive: self.$coordinator.stacked
                 ) {
                     Text("New Game")
                 }
                 .isDetailLink(false)
             }
+            .environmentObject(coordinator)
         } else {
             // Display error view that automatically sends a report of the game scene not being available.
         }
