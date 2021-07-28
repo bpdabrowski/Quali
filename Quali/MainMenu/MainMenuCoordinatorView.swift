@@ -17,20 +17,15 @@ struct MainMenuCoordinatorView: View {
     }
     
     var body: some View {
-        if let gameViewModel = coordinator.gameViewModel {
-            
-            NavigationView {
-                NavigationLink(
-                    destination: GameSceneView(viewModel: gameViewModel),
-                    isActive: self.$coordinator.isMenuHidden
-                ) {
-                    Text("New Game")
-                }
-                .isDetailLink(false)
+        NavigationView {
+            NavigationLink(
+                destination: GameSceneView(viewModel: coordinator.gameViewModel),
+                isActive: self.$coordinator.isMenuHidden
+            ) {
+                Text("New Game")
             }
-            .environmentObject(coordinator)
-        } else {
-            // Display error view that automatically sends a report of the game scene not being available.
+            .isDetailLink(false)
         }
+        .environmentObject(coordinator)
     }
 }

@@ -10,11 +10,16 @@ import SpriteKit
 import Combine
 
 struct GameSceneView: View {
-    @StateObject var viewModel: GameViewModel
+    
+    @State private var viewModel: GameViewModel
+    
+    init(viewModel: GameViewModel) {
+        self.viewModel = viewModel
+    }
     
     var scene: SKScene {
         let scene = self.viewModel.gameScene
-        scene.currentTrack = viewModel.currentTrack
+        scene.currentTrack = self.viewModel.currentTrack
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .aspectFill
         viewModel.setupGameOverListener(for: scene)

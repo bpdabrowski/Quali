@@ -10,21 +10,21 @@ import Combine
 
 class GameViewModel: ObservableObject {
     
-    private unowned let coordinator: MainMenuCoordinator
     private var subscriptions = Set<AnyCancellable>()
     
     @Published var currentTrack: String
     @Published var gameScene = GameScene()
     @Published var showGameOverView = false
     
-    init(currentTrack: String, coordinator: MainMenuCoordinator) {
+    init(currentTrack: String) {
         self.currentTrack = currentTrack
-        self.coordinator = coordinator
     }
     
     func setupGameOverListener(for scene: GameSceneProtocol) {
         scene.isGameOver.handleEvents(receiveOutput: { [weak self] _ in
             self?.showGameOverView.toggle()
+            
+            // Create a new GameScene when the game is over so that the user isn't playing the same game that ended.
             self?.gameScene = GameScene()
         })
         .sink { _ in }

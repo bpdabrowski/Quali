@@ -24,7 +24,6 @@ class GameScene: SKScene, GameSceneProtocol {
         box.position = location
         box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
         addChild(box)
-        print(currentTrack)
         self.isGameOver.send(true)
     }
 }
