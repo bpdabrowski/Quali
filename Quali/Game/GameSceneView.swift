@@ -11,11 +11,7 @@ import Combine
 
 struct GameSceneView: View {
     
-    @State private var viewModel: GameViewModel
-    
-    init(viewModel: GameViewModel) {
-        self.viewModel = viewModel
-    }
+    @StateObject var viewModel: GameViewModel
     
     var scene: SKScene {
         let scene = self.viewModel.gameScene
