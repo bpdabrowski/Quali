@@ -10,18 +10,14 @@ import SpriteKit
 import Combine
 
 struct GameSceneView: View {
-    
-    @ObservedObject var viewModel: GameViewModel
-    @State private var showGameOverView = false
+    @StateObject var viewModel: GameViewModel
     
     var scene: SKScene {
-        let scene = GameScene()
+        let scene = self.viewModel.gameScene
         scene.currentTrack = viewModel.currentTrack
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .aspectFill
-        viewModel.setupGameOverListener(for: scene) {
-            showGameOverView.toggle()
-        }
+        viewModel.setupGameOverListener(for: scene)
         
         return scene
     }
@@ -32,27 +28,5 @@ struct GameSceneView: View {
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-        
-        NavigationLink(destination: GameOverView(), isActive: $showGameOverView) { EmptyView()
-        }.isDetailLink(false)
-    }
-}
-
-struct GameOverView: View {
-    @EnvironmentObject var coordinator: MainMenuCoordinator
-    
-    var body: some View {
-        VStack {
-            Button("Restart") {
-//                presentationMode.wrappedValue.dismiss()
-            }
-            .font(.title)
-            .padding()
-            .background(Color.black)
-            
-            Button(action: { self.coordinator.stacked = false }) {
-                Text("Main Menu")
-            }
-        }
     }
 }

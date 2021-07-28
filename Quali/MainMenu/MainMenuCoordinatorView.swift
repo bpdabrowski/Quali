@@ -22,7 +22,7 @@ struct MainMenuCoordinatorView: View {
             NavigationView {
                 NavigationLink(
                     destination: GameSceneView(viewModel: gameViewModel),
-                    isActive: self.$coordinator.stacked
+                    isActive: self.$coordinator.isMenuHidden
                 ) {
                     Text("New Game")
                 }
