@@ -11,7 +11,7 @@ import Combine
 
 struct GameSceneView: View {
     
-    @StateObject private var gameViewModel: GameViewModel = GameViewModel(currentTrack: "Monaco")
+    @StateObject private var gameViewModel: GameViewModel = GameViewModel()
     
     var scene: SKScene {
         let scene = self.gameViewModel.gameScene

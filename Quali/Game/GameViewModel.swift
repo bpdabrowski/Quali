@@ -12,13 +12,9 @@ class GameViewModel: ObservableObject {
     
     private var subscriptions = Set<AnyCancellable>()
     
-    @Published var currentTrack: String
+    @Published var currentTrack: String = "Monaco"
     @Published var gameScene = GameScene()
     @Published var showGameOverView = false
-    
-    init(currentTrack: String) {
-        self.currentTrack = currentTrack
-    }
     
     func setupGameOverListener(for scene: GameSceneProtocol) {
         scene.isGameOver.handleEvents(receiveOutput: { [weak self] _ in
