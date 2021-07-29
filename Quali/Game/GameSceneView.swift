@@ -11,14 +11,14 @@ import Combine
 
 struct GameSceneView: View {
     
-    @StateObject var viewModel: GameViewModel
+    @StateObject private var gameViewModel: GameViewModel = GameViewModel(currentTrack: "Monaco")
     
     var scene: SKScene {
-        let scene = self.viewModel.gameScene
-        scene.currentTrack = self.viewModel.currentTrack
+        let scene = self.gameViewModel.gameScene
+        scene.currentTrack = self.gameViewModel.currentTrack
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .aspectFill
-        viewModel.setupGameOverListener(for: scene)
+        self.gameViewModel.setupGameOverListener(for: scene)
         
         return scene
     }

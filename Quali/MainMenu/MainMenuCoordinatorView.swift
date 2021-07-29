@@ -19,8 +19,8 @@ struct MainMenuCoordinatorView: View {
     var body: some View {
         NavigationView {
             NavigationLink(
-                destination: GameSceneView(viewModel: coordinator.gameViewModel),
-                isActive: self.$coordinator.isMenuHidden
+                destination: GameSceneView(),
+                isActive: self.$coordinator.isMainMenuHidden
             ) {
                 Text("New Game")
             }
