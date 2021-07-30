@@ -6,10 +6,12 @@
 //
 
 import SpriteKit
+import Combine
 
-class GameScene: SKScene {
+class GameScene: SKScene, GameSceneProtocol {
     
     var currentTrack: String! = nil
+    let isGameOver = PassthroughSubject<Bool, Never>()
     
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -22,6 +24,6 @@ class GameScene: SKScene {
         box.position = location
         box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
         addChild(box)
-        print(currentTrack)
+        self.isGameOver.send(true)
     }
 }

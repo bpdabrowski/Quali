@@ -12,12 +12,6 @@ class MainMenuCoordinator: ObservableObject, Identifiable {
     
     // MARK: Stored Properties
     
-    @Published var gameViewModel: GameViewModel?
-    private let currentTrack = "Monaco" // TODO: Update this with the selected track.
-
-    // MARK: Initialization
-
-    init() {
-        self.gameViewModel = .init(currentTrack: currentTrack, coordinator: self)
-    }
+    @Published var isMainMenuHidden = false
+    
 }

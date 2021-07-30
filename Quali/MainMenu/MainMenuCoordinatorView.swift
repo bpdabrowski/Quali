@@ -11,19 +11,21 @@ struct MainMenuCoordinatorView: View {
     
     @ObservedObject var coordinator: MainMenuCoordinator
     
+    init(coordinator: MainMenuCoordinator) {
+        self.coordinator = coordinator
+        UINavigationBar.setAnimationsEnabled(false)
+    }
+    
     var body: some View {
-        if let gameViewModel = coordinator.gameViewModel {
-            VStack {
-                NavigationView {
-                    NavigationLink(
-                        destination: GameSceneView(viewModel: gameViewModel)
-                    ) {
-                        Text("New Game")
-                    }
-                }
+        NavigationView {
+            NavigationLink(
+                destination: GameSceneView(),
+                isActive: self.$coordinator.isMainMenuHidden
+            ) {
+                Text("New Game")
             }
-        } else {
-            // Display error view that automatically sends a report of the game scene not being available.
+            .isDetailLink(false)
         }
+        .environmentObject(coordinator)
     }
 }
