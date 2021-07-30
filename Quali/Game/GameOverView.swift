@@ -10,12 +10,12 @@ import SwiftUI
 struct GameOverView: View {
     
     @EnvironmentObject var coordinator: MainMenuCoordinator
-    @ObservedObject var gameViewModel: GameViewModel
+    @ObservedObject var gameViewCoordinator: GameViewCoordinator
     
     var body: some View {
         VStack {
             Button("Restart") {
-                self.gameViewModel.showGameOverView.toggle()
+                self.gameViewCoordinator.showGameOverView.toggle()
             }
             .font(.title)
             .padding()

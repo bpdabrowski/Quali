@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class GameViewModel: ObservableObject {
+class GameViewCoordinator: ObservableObject {
     
     private var subscriptions = Set<AnyCancellable>()
     

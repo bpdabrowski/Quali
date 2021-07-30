@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainMenuCoordinatorView: View {
+struct MainMenuView: View {
     
     @ObservedObject var coordinator: MainMenuCoordinator
     
