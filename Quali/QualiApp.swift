@@ -14,7 +14,7 @@ struct QualiApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainMenuCoordinatorView(coordinator: coordinator)
+            MainMenuView(coordinator: coordinator)
         }
     }
 }

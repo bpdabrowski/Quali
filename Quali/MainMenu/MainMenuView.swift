@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainMenuCoordinatorView: View {
+struct MainMenuView: View {
     
     @ObservedObject var coordinator: MainMenuCoordinator
     
@@ -25,6 +25,7 @@ struct MainMenuCoordinatorView: View {
                 Text("New Game")
             }
             .isDetailLink(false)
+            .accessibilityIdentifier("NewGameButton") // Used for UI Tests
         }
         .environmentObject(coordinator)
     }

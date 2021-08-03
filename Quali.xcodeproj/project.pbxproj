@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F2099232266332F500DD3B1E /* QualiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099231266332F500DD3B1E /* QualiApp.swift */; };
-		F2099234266332F500DD3B1E /* MainMenuCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099233266332F500DD3B1E /* MainMenuCoordinatorView.swift */; };
+		F2099234266332F500DD3B1E /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099233266332F500DD3B1E /* MainMenuView.swift */; };
 		F2099236266332F900DD3B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2099235266332F900DD3B1E /* Assets.xcassets */; };
 		F2099239266332F900DD3B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2099238266332F900DD3B1E /* Preview Assets.xcassets */; };
-		F2099244266332FA00DD3B1E /* QualiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099243266332FA00DD3B1E /* QualiTests.swift */; };
-		F209924F266332FA00DD3B1E /* QualiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209924E266332FA00DD3B1E /* QualiUITests.swift */; };
 		F20992602663341E00DD3B1E /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209925F2663341E00DD3B1E /* GameSceneView.swift */; };
 		F20992652663399B00DD3B1E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20992642663399B00DD3B1E /* GameScene.swift */; };
 		F209926F2664899E00DD3B1E /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209926E2664899E00DD3B1E /* MainMenuCoordinator.swift */; };
-		F20992772665648500DD3B1E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20992762665648500DD3B1E /* GameViewModel.swift */; };
-		F24494242665CE220018391A /* GameSceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24494232665CE220018391A /* GameSceneProtocol.swift */; };
+		F20992772665648500DD3B1E /* GameViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20992762665648500DD3B1E /* GameViewCoordinator.swift */; };
 		F244943A266890670018391A /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2449439266890670018391A /* GameOverView.swift */; };
+		F2A57F3C26B39990002080A7 /* MainMenuViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A57F3B26B39990002080A7 /* MainMenuViewUITests.swift */; };
+		F2C2636D26B8E8050041FE0D /* GameViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */; };
+		F2EFF40026B72BE800ECF3FF /* GameSceneViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */; };
+		F2EFF40226B72DB400ECF3FF /* AccId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF40126B72DB400ECF3FF /* AccId.swift */; };
+		F2EFF40426B73EDC00ECF3FF /* GameOverViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,22 +43,24 @@
 /* Begin PBXFileReference section */
 		F209922E266332F500DD3B1E /* Quali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2099231266332F500DD3B1E /* QualiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiApp.swift; sourceTree = "<group>"; };
-		F2099233266332F500DD3B1E /* MainMenuCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinatorView.swift; sourceTree = "<group>"; };
+		F2099233266332F500DD3B1E /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		F2099235266332F900DD3B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2099238266332F900DD3B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F209923A266332F900DD3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F209923F266332FA00DD3B1E /* QualiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QualiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2099243266332FA00DD3B1E /* QualiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiTests.swift; sourceTree = "<group>"; };
 		F2099245266332FA00DD3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F209924A266332FA00DD3B1E /* QualiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QualiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F209924E266332FA00DD3B1E /* QualiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiUITests.swift; sourceTree = "<group>"; };
 		F2099250266332FA00DD3B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F209925F2663341E00DD3B1E /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
 		F20992642663399B00DD3B1E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F209926E2664899E00DD3B1E /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
-		F20992762665648500DD3B1E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		F24494232665CE220018391A /* GameSceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneProtocol.swift; sourceTree = "<group>"; };
+		F20992762665648500DD3B1E /* GameViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCoordinator.swift; sourceTree = "<group>"; };
 		F2449439266890670018391A /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		F2A57F3B26B39990002080A7 /* MainMenuViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewUITests.swift; sourceTree = "<group>"; };
+		F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCoordinatorTests.swift; sourceTree = "<group>"; };
+		F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneViewTests.swift; sourceTree = "<group>"; };
+		F2EFF40126B72DB400ECF3FF /* AccId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccId.swift; sourceTree = "<group>"; };
+		F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +132,7 @@
 		F2099242266332FA00DD3B1E /* QualiTests */ = {
 			isa = PBXGroup;
 			children = (
-				F2099243266332FA00DD3B1E /* QualiTests.swift */,
+				F2C2636B26B8E7F00041FE0D /* Game */,
 				F2099245266332FA00DD3B1E /* Info.plist */,
 			);
 			path = QualiTests;
@@ -137,8 +141,10 @@
 		F209924D266332FA00DD3B1E /* QualiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F209924E266332FA00DD3B1E /* QualiUITests.swift */,
+				F2EFF3FE26B72BC000ECF3FF /* Game */,
+				F2A57F3A26B3996C002080A7 /* MainMenu */,
 				F2099250266332FA00DD3B1E /* Info.plist */,
+				F2EFF40126B72DB400ECF3FF /* AccId.swift */,
 			);
 			path = QualiUITests;
 			sourceTree = "<group>";
@@ -147,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F209926E2664899E00DD3B1E /* MainMenuCoordinator.swift */,
-				F2099233266332F500DD3B1E /* MainMenuCoordinatorView.swift */,
+				F2099233266332F500DD3B1E /* MainMenuView.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -157,9 +163,33 @@
 			children = (
 				F209925F2663341E00DD3B1E /* GameSceneView.swift */,
 				F20992642663399B00DD3B1E /* GameScene.swift */,
-				F20992762665648500DD3B1E /* GameViewModel.swift */,
-				F24494232665CE220018391A /* GameSceneProtocol.swift */,
+				F20992762665648500DD3B1E /* GameViewCoordinator.swift */,
 				F2449439266890670018391A /* GameOverView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		F2A57F3A26B3996C002080A7 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F2A57F3B26B39990002080A7 /* MainMenuViewUITests.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		F2C2636B26B8E7F00041FE0D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		F2EFF3FE26B72BC000ECF3FF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */,
+				F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -234,6 +264,7 @@
 					};
 					F209923E266332FA00DD3B1E = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 						TestTargetID = F209922D266332F500DD3B1E;
 					};
 					F2099249266332FA00DD3B1E = {
@@ -293,9 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20992772665648500DD3B1E /* GameViewModel.swift in Sources */,
-				F2099234266332F500DD3B1E /* MainMenuCoordinatorView.swift in Sources */,
-				F24494242665CE220018391A /* GameSceneProtocol.swift in Sources */,
+				F20992772665648500DD3B1E /* GameViewCoordinator.swift in Sources */,
+				F2099234266332F500DD3B1E /* MainMenuView.swift in Sources */,
 				F20992602663341E00DD3B1E /* GameSceneView.swift in Sources */,
 				F209926F2664899E00DD3B1E /* MainMenuCoordinator.swift in Sources */,
 				F20992652663399B00DD3B1E /* GameScene.swift in Sources */,
@@ -308,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2099244266332FA00DD3B1E /* QualiTests.swift in Sources */,
+				F2C2636D26B8E8050041FE0D /* GameViewCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F209924F266332FA00DD3B1E /* QualiUITests.swift in Sources */,
+				F2EFF40226B72DB400ECF3FF /* AccId.swift in Sources */,
+				F2A57F3C26B39990002080A7 /* MainMenuViewUITests.swift in Sources */,
+				F2EFF40426B73EDC00ECF3FF /* GameOverViewTests.swift in Sources */,
+				F2EFF40026B72BE800ECF3FF /* GameSceneViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +534,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T6B5WZ44S;
 				INFOPLIST_FILE = QualiTests/Info.plist;
@@ -512,6 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BDCreative.QualiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quali.app/Quali";
@@ -523,6 +558,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T6B5WZ44S;
 				INFOPLIST_FILE = QualiTests/Info.plist;

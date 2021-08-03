@@ -10,20 +10,19 @@ import SwiftUI
 struct GameOverView: View {
     
     @EnvironmentObject var coordinator: MainMenuCoordinator
-    @ObservedObject var gameViewModel: GameViewModel
+    @ObservedObject var gameViewCoordinator: GameViewCoordinator
     
     var body: some View {
         VStack {
             Button("Restart") {
-                self.gameViewModel.showGameOverView.toggle()
+                self.gameViewCoordinator.showGameOverView.toggle()
             }
-            .font(.title)
-            .padding()
-            .background(Color.black)
+            .accessibility(identifier: "RestartButton")
             
             Button(action: { self.coordinator.isMainMenuHidden.toggle() }) {
                 Text("Main Menu")
             }
+            .accessibility(identifier: "MainMenuButton")
         }
     }
 }
