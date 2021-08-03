@@ -25,6 +25,7 @@ struct MainMenuView: View {
                 Text("New Game")
             }
             .isDetailLink(false)
+            .accessibilityIdentifier("NewGameButton") // Used for UI Tests
         }
         .environmentObject(coordinator)
     }

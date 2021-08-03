@@ -15,10 +15,9 @@ struct GameSceneView: View {
     
     var scene: SKScene {
         let scene = self.gameViewCoordinator.gameScene
-        scene.currentTrack = self.gameViewCoordinator.currentTrack
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .aspectFill
-        self.gameViewCoordinator.setupGameOverListener(for: scene)
+        self.gameViewCoordinator.setupGameOverListener()
         
         return scene
     }
@@ -29,5 +28,6 @@ struct GameSceneView: View {
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
+            .accessibilityIdentifier("GameScene")
     }
 }

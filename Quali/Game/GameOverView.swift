@@ -17,13 +17,12 @@ struct GameOverView: View {
             Button("Restart") {
                 self.gameViewCoordinator.showGameOverView.toggle()
             }
-            .font(.title)
-            .padding()
-            .background(Color.black)
+            .accessibility(identifier: "RestartButton")
             
             Button(action: { self.coordinator.isMainMenuHidden.toggle() }) {
                 Text("Main Menu")
             }
+            .accessibility(identifier: "MainMenuButton")
         }
     }
 }

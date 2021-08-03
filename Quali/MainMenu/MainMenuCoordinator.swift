@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class MainMenuCoordinator: ObservableObject, Identifiable {
+class MainMenuCoordinator: ObservableObject {
     
     // MARK: Stored Properties
     
