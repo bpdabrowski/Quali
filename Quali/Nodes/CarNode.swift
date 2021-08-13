@@ -41,7 +41,7 @@ class CarNode: SKSpriteNode {
 //            print("Unable to get a reference to the car nodes physicsBody.")
 //            return
 //        }
-//      
+//
 //        let newVelocity = (target - position).normalized() * PlayerSettings.playerSpeed
 //        physicsBody.velocity = CGVector(point: newVelocity)
     }
