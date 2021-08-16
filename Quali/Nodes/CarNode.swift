@@ -15,7 +15,7 @@ class CarNode: SKSpriteNode {
     
     init(startingPosition: CGPoint) {
         let texture = SKTexture(imageNamed: "car")
-        super.init(texture: texture, color: .white, size: CGSize(width: 15, height: 35))
+        super.init(texture: texture, color: .white, size: CGSize(width: 40, height: 94))
         self.name = "car"
         self.zPosition = ZPosition.car
         self.position = startingPosition

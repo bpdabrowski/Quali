@@ -16,17 +16,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         
-        guard let startFinishLine = self.childNode(withName: "//StartFinishLine") as? StartFinishLineNode else {
-            print("unable to find startFinishLine")
-            return
-        }
-        
+        let startFinishLine = self.childNode(withName: "//StartFinishLine") as! StartFinishLineNode
         startFinishLine.setupNode()
-        
         self.car = CarNode(startingPosition: CGPoint(x: startFinishLine.position.x - 20,
                                                      y: startFinishLine.position.y - 50))
         self.addChild(self.car)
         self.setupCamera()
+        
         #if DEBUG
         view.showsPhysics = true
         #endif
@@ -49,6 +45,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setupCamera() {
         guard let camera = self.camera else { return }
+        camera.setScale(3)
+        
         let zeroDistance = SKRange(constantValue: 0)
         let playerConstraint = SKConstraint.distance(zeroDistance, to: self.car)
         camera.constraints = [playerConstraint]
