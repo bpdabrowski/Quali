@@ -14,13 +14,10 @@ struct GameSceneView: View {
     @StateObject private var gameViewCoordinator: GameViewCoordinator = GameViewCoordinator()
     
     var scene: SKScene {
-        guard let scene = self.gameViewCoordinator.gameScene else {
-            print("Unable to create get a reference to the gameScene.")
-            return GameScene()
-        }
-        scene.scaleMode = .resizeFill
+        let scene = self.gameViewCoordinator.gameScene
+        scene!.scaleMode = .resizeFill
         self.gameViewCoordinator.setupGameOverListener()
-        return scene
+        return scene!
     }
 
     var body: some View {

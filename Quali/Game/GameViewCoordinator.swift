@@ -11,7 +11,7 @@ import Combine
 class GameViewCoordinator: ObservableObject {
     
     private var subscriptions = Set<AnyCancellable>()
-    private(set) var gameScene: GameScene? = GameScene(fileNamed: "Bristol")
+    private(set) var gameScene: GameScene! = GameScene(fileNamed: "Bristol")
     
     @Published var showGameOverView = false
 

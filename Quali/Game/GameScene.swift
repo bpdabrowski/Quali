@@ -28,14 +28,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         #endif
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            print("Unable to get touch.")
-            return
-        }
-        self.car.move(target: touch.location(in: self))
-    }
-    
     func didBegin(_ contact: SKPhysicsContact) {
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if collision == PhysicsCategory.Car | PhysicsCategory.StartFinishLine {
