@@ -11,10 +11,12 @@ class StartFinishLineNode: SKSpriteNode {
     
     func setupNode() {
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
-        self.physicsBody?.affectedByGravity = false
-        self.physicsBody?.allowsRotation = false
-        self.physicsBody?.isDynamic = false
-        self.physicsBody?.categoryBitMask = PhysicsCategory.StartFinishLine
-        self.physicsBody?.collisionBitMask = PhysicsCategory.None
+        if let physicsBody = self.physicsBody {
+            physicsBody.affectedByGravity = false
+            physicsBody.allowsRotation = false
+            physicsBody.isDynamic = false
+            physicsBody.categoryBitMask = PhysicsCategory.StartFinishLine
+            physicsBody.collisionBitMask = PhysicsCategory.None
+        }
     }
 }
