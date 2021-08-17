@@ -16,7 +16,7 @@ class GameViewCoordinator: ObservableObject {
     @Published var showGameOverView = false
 
     func setupGameOverListener() {
-        self.gameScene?.isGameOver.sink(receiveValue: { [weak self] isGameOver in
+        self.gameScene.isGameOver.sink(receiveValue: { [weak self] isGameOver in
             guard let self = self, isGameOver == true else { return }
             self.showGameOverView = isGameOver
 
