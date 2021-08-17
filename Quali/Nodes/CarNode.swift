@@ -35,14 +35,4 @@ class CarNode: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    func move(target: CGPoint) {
-//        guard let physicsBody = self.physicsBody else {
-//            print("Unable to get a reference to the car nodes physicsBody.")
-//            return
-//        }
-//
-//        let newVelocity = (target - position).normalized() * PlayerSettings.playerSpeed
-//        physicsBody.velocity = CGVector(point: newVelocity)
-    }
 }
