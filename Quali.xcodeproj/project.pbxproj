@@ -19,6 +19,9 @@
 		F244943A266890670018391A /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2449439266890670018391A /* GameOverView.swift */; };
 		F24C735B26C4C5BD0047773A /* StartFinishLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C735A26C4C5BD0047773A /* StartFinishLineNode.swift */; };
 		F29374E726C9D06E007D21C8 /* Bristol.sks in Resources */ = {isa = PBXBuildFile; fileRef = F29374E626C9D06E007D21C8 /* Bristol.sks */; };
+		F29374E926CB5DA9007D21C8 /* GameSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */; };
+		F29374EE26CCAAFF007D21C8 /* CarNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */; };
+		F29374F026CCB028007D21C8 /* StartFinishLineNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */; };
 		F293816F26BCE9E900BD4C89 /* CarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293816E26BCE9E900BD4C89 /* CarNode.swift */; };
 		F293818226BF22FB00BD4C89 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293817626BF22FB00BD4C89 /* SKColor+Extensions.swift */; };
 		F293818326BF22FB00BD4C89 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293817726BF22FB00BD4C89 /* CGVector+Extensions.swift */; };
@@ -76,6 +79,9 @@
 		F2449439266890670018391A /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		F24C735A26C4C5BD0047773A /* StartFinishLineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFinishLineNode.swift; sourceTree = "<group>"; };
 		F29374E626C9D06E007D21C8 /* Bristol.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bristol.sks; sourceTree = "<group>"; };
+		F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneTests.swift; sourceTree = "<group>"; };
+		F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNodeTests.swift; sourceTree = "<group>"; };
+		F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFinishLineNodeTests.swift; sourceTree = "<group>"; };
 		F293816E26BCE9E900BD4C89 /* CarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNode.swift; sourceTree = "<group>"; };
 		F293817626BF22FB00BD4C89 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
 		F293817726BF22FB00BD4C89 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		F2099242266332FA00DD3B1E /* QualiTests */ = {
 			isa = PBXGroup;
 			children = (
+				F29374EC26CCAAEE007D21C8 /* Nodes */,
 				F2C2636B26B8E7F00041FE0D /* Game */,
 				F2099245266332FA00DD3B1E /* Info.plist */,
 			);
@@ -206,6 +213,15 @@
 				F220F62426C61A880040D1C0 /* ZPosition.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		F29374EC26CCAAEE007D21C8 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */,
+				F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		F293816626BCDDC000BD4C89 /* Tracks */ = {
@@ -256,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */,
+				F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -430,6 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29374E926CB5DA9007D21C8 /* GameSceneTests.swift in Sources */,
+				F29374F026CCB028007D21C8 /* StartFinishLineNodeTests.swift in Sources */,
+				F29374EE26CCAAFF007D21C8 /* CarNodeTests.swift in Sources */,
 				F2C2636D26B8E8050041FE0D /* GameViewCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

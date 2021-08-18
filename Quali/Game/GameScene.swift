@@ -35,7 +35,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func setupCamera() {
+    private func setupCamera() {
         guard let camera = self.camera else { return }
         camera.setScale(3)
         
