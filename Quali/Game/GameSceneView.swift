@@ -15,11 +15,9 @@ struct GameSceneView: View {
     
     var scene: SKScene {
         let scene = self.gameViewCoordinator.gameScene
-        scene.size = CGSize(width: 300, height: 400)
-        scene.scaleMode = .aspectFill
+        scene!.scaleMode = .resizeFill
         self.gameViewCoordinator.setupGameOverListener()
-        
-        return scene
+        return scene!
     }
 
     var body: some View {
