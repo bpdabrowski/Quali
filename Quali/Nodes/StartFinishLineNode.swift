@@ -10,6 +10,7 @@ import SpriteKit
 class StartFinishLineNode: SKSpriteNode {
     
     func setupNode() {
+        self.zPosition = ZPosition.startFinishLine
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         if let physicsBody = self.physicsBody {
             physicsBody.affectedByGravity = false

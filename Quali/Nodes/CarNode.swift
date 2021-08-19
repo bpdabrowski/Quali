@@ -26,12 +26,22 @@ class CarNode: SKSpriteNode {
             physicsBody.allowsRotation = false
             physicsBody.affectedByGravity = false
             physicsBody.categoryBitMask = PhysicsCategory.Car
-            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine
+            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine | PhysicsCategory.TrackBoundary
             physicsBody.collisionBitMask = PhysicsCategory.None
         }
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func move(target: CGPoint) {
+        guard let physicsBody = self.physicsBody else {
+            print("Unable to get a reference to the car nodes physicsBody.")
+            return
+        }
+
+        let newVelocity = (target - position).normalized() * PlayerSettings.playerSpeed
+        physicsBody.velocity = CGVector(point: newVelocity)
     }
 }

@@ -12,4 +12,5 @@ struct PhysicsCategory {
     static let All: UInt32 = 0xFFFFFFFF
     static let Car: UInt32 = 0b1 // 1
     static let StartFinishLine: UInt32 = 0b10 // 2
+    static let TrackBoundary: UInt32 = 0b100 // 4
 }

@@ -22,6 +22,7 @@
 		F29374E926CB5DA9007D21C8 /* GameSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */; };
 		F29374EE26CCAAFF007D21C8 /* CarNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */; };
 		F29374F026CCB028007D21C8 /* StartFinishLineNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */; };
+		F29374F226CCB746007D21C8 /* TrackNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29374F126CCB746007D21C8 /* TrackNode.swift */; };
 		F293816F26BCE9E900BD4C89 /* CarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293816E26BCE9E900BD4C89 /* CarNode.swift */; };
 		F293818226BF22FB00BD4C89 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293817626BF22FB00BD4C89 /* SKColor+Extensions.swift */; };
 		F293818326BF22FB00BD4C89 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293817726BF22FB00BD4C89 /* CGVector+Extensions.swift */; };
@@ -82,6 +83,7 @@
 		F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneTests.swift; sourceTree = "<group>"; };
 		F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNodeTests.swift; sourceTree = "<group>"; };
 		F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFinishLineNodeTests.swift; sourceTree = "<group>"; };
+		F29374F126CCB746007D21C8 /* TrackNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackNode.swift; sourceTree = "<group>"; };
 		F293816E26BCE9E900BD4C89 /* CarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNode.swift; sourceTree = "<group>"; };
 		F293817626BF22FB00BD4C89 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
 		F293817726BF22FB00BD4C89 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
@@ -151,15 +153,15 @@
 		F2099230266332F500DD3B1E /* Quali */ = {
 			isa = PBXGroup;
 			children = (
-				F293817526BF22FB00BD4C89 /* SKTUtils */,
-				F293816B26BCE81700BD4C89 /* Nodes */,
-				F293816626BCDDC000BD4C89 /* Tracks */,
+				F209923A266332F900DD3B1E /* Info.plist */,
 				F2099231266332F500DD3B1E /* QualiApp.swift */,
+				F2099235266332F900DD3B1E /* Assets.xcassets */,
 				F209928226656E5600DD3B1E /* Game */,
 				F209928126656E4400DD3B1E /* MainMenu */,
-				F2099235266332F900DD3B1E /* Assets.xcassets */,
-				F209923A266332F900DD3B1E /* Info.plist */,
+				F293816B26BCE81700BD4C89 /* Nodes */,
 				F2099237266332F900DD3B1E /* Preview Content */,
+				F293817526BF22FB00BD4C89 /* SKTUtils */,
+				F293816626BCDDC000BD4C89 /* Tracks */,
 			);
 			path = Quali;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 			children = (
 				F24C735A26C4C5BD0047773A /* StartFinishLineNode.swift */,
 				F293816E26BCE9E900BD4C89 /* CarNode.swift */,
+				F29374F126CCB746007D21C8 /* TrackNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				F293818D26BF22FB00BD4C89 /* CGFloat+Extensions.swift in Sources */,
 				F244943A266890670018391A /* GameOverView.swift in Sources */,
 				F293818B26BF22FB00BD4C89 /* SKTAudio.swift in Sources */,
+				F29374F226CCB746007D21C8 /* TrackNode.swift in Sources */,
 				F293818C26BF22FB00BD4C89 /* Vector3.swift in Sources */,
 				F2099232266332F500DD3B1E /* QualiApp.swift in Sources */,
 			);
