@@ -16,16 +16,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         
-//        let startFinishLine = self.childNode(withName: "//StartFinishLine") as! StartFinishLineNode
-//        startFinishLine.setupNode()
-        
         var startFinishLine: SKNode!
         self.enumerateChildNodes(withName: "//*") { node, _  in
             if let trackNode = node as? TrackNode {
                 trackNode.setupNode(for: trackNode.name!)
             } else if let startFinishLineNode = node as? StartFinishLineNode {
-                startFinishLine = startFinishLineNode
                 startFinishLineNode.setupNode()
+                startFinishLine = startFinishLineNode
             }
         }
         
@@ -52,9 +49,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if collision == PhysicsCategory.Car | PhysicsCategory.StartFinishLine {
             print("Quali Started")
-        } else if collision == PhysicsCategory.Car | PhysicsCategory.TrackBoundary {
-            self.isGameOver.send(true)
-            print("Hit Boundary")
+        } else if collision == PhysicsCategory.Car | PhysicsCategory.InnerBoundary {
+//            self.isGameOver.send(true)
+            print("Hit Inner Boundary")
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        if collision == PhysicsCategory.Car | PhysicsCategory.OuterBoundary {
+            //            self.isGameOver.send(true)
+            print("Hit Outer Boundary")
         }
     }
     

@@ -26,7 +26,7 @@ class CarNode: SKSpriteNode {
             physicsBody.allowsRotation = false
             physicsBody.affectedByGravity = false
             physicsBody.categoryBitMask = PhysicsCategory.Car
-            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine | PhysicsCategory.TrackBoundary
+            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine | PhysicsCategory.InnerBoundary | PhysicsCategory.OuterBoundary
             physicsBody.collisionBitMask = PhysicsCategory.None
         }
     }

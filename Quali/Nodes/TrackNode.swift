@@ -16,8 +16,21 @@ class TrackNode: SKSpriteNode {
             physicsBody.affectedByGravity = false
             physicsBody.allowsRotation = false
             physicsBody.isDynamic = false
-            physicsBody.categoryBitMask = PhysicsCategory.TrackBoundary
             physicsBody.collisionBitMask = PhysicsCategory.None
         }
+    }
+}
+
+class InnerBoundaryNode: TrackNode {
+    override func setupNode(for imageName: String) {
+        super.setupNode(for: imageName)
+        self.physicsBody?.categoryBitMask = PhysicsCategory.InnerBoundary
+    }
+}
+
+class OuterBoundaryNode: TrackNode {
+    override func setupNode(for imageName: String) {
+        super.setupNode(for: imageName)
+        self.physicsBody?.categoryBitMask = PhysicsCategory.OuterBoundary
     }
 }
