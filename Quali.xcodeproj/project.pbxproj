@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89D470A426D0B7E30007034B /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */; };
 		F2099232266332F500DD3B1E /* QualiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099231266332F500DD3B1E /* QualiApp.swift */; };
 		F2099234266332F500DD3B1E /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099233266332F500DD3B1E /* MainMenuView.swift */; };
 		F2099236266332F900DD3B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2099235266332F900DD3B1E /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegate.swift; sourceTree = "<group>"; };
 		F209922E266332F500DD3B1E /* Quali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2099231266332F500DD3B1E /* QualiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiApp.swift; sourceTree = "<group>"; };
 		F2099233266332F500DD3B1E /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				F2449439266890670018391A /* GameOverView.swift */,
 				F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */,
 				F220F62426C61A880040D1C0 /* ZPosition.swift */,
+				89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				F293818226BF22FB00BD4C89 /* SKColor+Extensions.swift in Sources */,
 				F293816F26BCE9E900BD4C89 /* CarNode.swift in Sources */,
 				F293818726BF22FB00BD4C89 /* SKAction+SpecialEffects.swift in Sources */,
+				89D470A426D0B7E30007034B /* PhysicsContactDelegate.swift in Sources */,
 				F20992652663399B00DD3B1E /* GameScene.swift in Sources */,
 				F293818926BF22FB00BD4C89 /* CGPoint+Extensions.swift in Sources */,
 				F293818626BF22FB00BD4C89 /* SKAction+Extensions.swift in Sources */,

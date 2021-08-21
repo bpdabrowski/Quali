@@ -10,8 +10,9 @@ import Combine
 
 class GameViewCoordinator: ObservableObject {
     
+    private static var trackName = "Bristol"
     private var subscriptions = Set<AnyCancellable>()
-    private(set) var gameScene: GameScene! = GameScene(fileNamed: "Bristol")
+    private(set) var gameScene: GameScene! = GameScene(fileNamed: trackName)
     
     @Published var showGameOverView = false
 
@@ -21,7 +22,7 @@ class GameViewCoordinator: ObservableObject {
             self.showGameOverView = isGameOver
 
             // Create a new GameScene when the game is over so that the user isn't playing the same game that ended.
-            self.gameScene = GameScene()
+            self.gameScene = GameScene(fileNamed: Self.trackName)
         })
         .store(in: &subscriptions)
     }

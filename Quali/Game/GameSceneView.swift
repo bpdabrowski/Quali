@@ -27,5 +27,11 @@ struct GameSceneView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             .accessibilityIdentifier("GameScene")
+        
+        NavigationLink(destination: GameOverView(gameViewCoordinator: gameViewCoordinator),
+                       isActive: self.$gameViewCoordinator.showGameOverView) {
+            EmptyView()
+        }
+        .isDetailLink(false)
     }
 }

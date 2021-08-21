@@ -8,15 +8,17 @@
 import SpriteKit
 import Combine
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene {
     
     let isGameOver = PassthroughSubject<Bool, Never>()
-    var car: CarNode!
+    private var car: CarNode!
+    private var contactDelegate: PhysicsContactDelegate?
     
     override func didMove(to view: SKView) {
-        self.physicsWorld.contactDelegate = self
+        self.contactDelegate = PhysicsContactDelegate(isGameOver: self.isGameOver)
+        self.physicsWorld.contactDelegate = contactDelegate
         
-        var startFinishLine: SKNode!
+        var startFinishLine: StartFinishLineNode!
         self.enumerateChildNodes(withName: "//*") { node, _  in
             if let trackNode = node as? TrackNode {
                 trackNode.setupNode(for: trackNode.name!)
@@ -26,8 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        self.car = CarNode(startingPosition: CGPoint(x: startFinishLine.position.x - 20,
-                                                     y: startFinishLine.position.y - 100))
+        self.car = CarNode(startingPosition: startFinishLine.startPosition)
         self.addChild(self.car)
         
         self.setupCamera()
@@ -43,24 +44,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         self.car.move(target: touch.location(in: self))
-    }
-    
-    func didBegin(_ contact: SKPhysicsContact) {
-        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        if collision == PhysicsCategory.Car | PhysicsCategory.StartFinishLine {
-            print("Quali Started")
-        } else if collision == PhysicsCategory.Car | PhysicsCategory.InnerBoundary {
-//            self.isGameOver.send(true)
-            print("Hit Inner Boundary")
-        }
-    }
-    
-    func didEnd(_ contact: SKPhysicsContact) {
-        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        if collision == PhysicsCategory.Car | PhysicsCategory.OuterBoundary {
-            //            self.isGameOver.send(true)
-            print("Hit Outer Boundary")
-        }
     }
     
     private func setupCamera() {

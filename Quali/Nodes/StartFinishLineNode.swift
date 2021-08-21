@@ -9,6 +9,11 @@ import SpriteKit
 
 class StartFinishLineNode: SKSpriteNode {
     
+    var startPosition: CGPoint {
+        return CGPoint(x: self.position.x - 20,
+                       y: self.position.y - 100)
+    }
+    
     func setupNode() {
         self.zPosition = ZPosition.startFinishLine
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
