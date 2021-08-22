@@ -54,4 +54,10 @@ class GameScene: SKScene {
         let playerConstraint = SKConstraint.distance(zeroDistance, to: self.car)
         camera.constraints = [playerConstraint]
     }
+    
+    #if DEBUG
+    func getContactDelegate() -> PhysicsContactDelegate {
+        return self.contactDelegate!
+    }
+    #endif
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		89934E5D26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */; };
+		89934E6126D213E300BA069C /* PhysicsContactDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89934E6026D213E300BA069C /* PhysicsContactDelegateTests.swift */; };
+		899B169C26D2A5C00096DB85 /* SKPhysicsBody+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B169B26D2A5C00096DB85 /* SKPhysicsBody+ExtensionsTests.swift */; };
+		899B169E26D2A8AC0096DB85 /* TrackNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B169D26D2A8AC0096DB85 /* TrackNodeTests.swift */; };
 		89D470A426D0B7E30007034B /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */; };
 		F2099232266332F500DD3B1E /* QualiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099231266332F500DD3B1E /* QualiApp.swift */; };
 		F2099234266332F500DD3B1E /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099233266332F500DD3B1E /* MainMenuView.swift */; };
@@ -41,7 +44,6 @@
 		F298FEC326C4C34C0003A4AF /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */; };
 		F2A57F3C26B39990002080A7 /* MainMenuViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A57F3B26B39990002080A7 /* MainMenuViewUITests.swift */; };
 		F2C2636D26B8E8050041FE0D /* GameViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */; };
-		F2EFF40026B72BE800ECF3FF /* GameSceneViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */; };
 		F2EFF40226B72DB400ECF3FF /* AccId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF40126B72DB400ECF3FF /* AccId.swift */; };
 		F2EFF40426B73EDC00ECF3FF /* GameOverViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,9 @@
 
 /* Begin PBXFileReference section */
 		89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+Extensions.swift"; sourceTree = "<group>"; };
+		89934E6026D213E300BA069C /* PhysicsContactDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegateTests.swift; sourceTree = "<group>"; };
+		899B169B26D2A5C00096DB85 /* SKPhysicsBody+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		899B169D26D2A8AC0096DB85 /* TrackNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackNodeTests.swift; sourceTree = "<group>"; };
 		89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegate.swift; sourceTree = "<group>"; };
 		F209922E266332F500DD3B1E /* Quali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2099231266332F500DD3B1E /* QualiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiApp.swift; sourceTree = "<group>"; };
@@ -104,7 +109,6 @@
 		F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		F2A57F3B26B39990002080A7 /* MainMenuViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewUITests.swift; sourceTree = "<group>"; };
 		F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCoordinatorTests.swift; sourceTree = "<group>"; };
-		F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneViewTests.swift; sourceTree = "<group>"; };
 		F2EFF40126B72DB400ECF3FF /* AccId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccId.swift; sourceTree = "<group>"; };
 		F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89934E5E26D2132400BA069C /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */,
+				89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */,
+				89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		89934E5F26D213C200BA069C /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				89934E6026D213E300BA069C /* PhysicsContactDelegateTests.swift */,
+				899B169B26D2A5C00096DB85 /* SKPhysicsBody+ExtensionsTests.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
 		F2099225266332F500DD3B1E = {
 			isa = PBXGroup;
 			children = (
@@ -211,14 +234,12 @@
 		F209928226656E5600DD3B1E /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				89934E5E26D2132400BA069C /* Physics */,
 				F209925F2663341E00DD3B1E /* GameSceneView.swift */,
 				F20992642663399B00DD3B1E /* GameScene.swift */,
 				F20992762665648500DD3B1E /* GameViewCoordinator.swift */,
 				F2449439266890670018391A /* GameOverView.swift */,
-				F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */,
 				F220F62426C61A880040D1C0 /* ZPosition.swift */,
-				89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */,
-				89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -228,6 +249,7 @@
 			children = (
 				F29374ED26CCAAFF007D21C8 /* CarNodeTests.swift */,
 				F29374EF26CCB028007D21C8 /* StartFinishLineNodeTests.swift */,
+				899B169D26D2A8AC0096DB85 /* TrackNodeTests.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -280,6 +302,7 @@
 		F2C2636B26B8E7F00041FE0D /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				89934E5F26D213C200BA069C /* Physics */,
 				F2C2636C26B8E8050041FE0D /* GameViewCoordinatorTests.swift */,
 				F29374E826CB5DA8007D21C8 /* GameSceneTests.swift */,
 			);
@@ -289,7 +312,6 @@
 		F2EFF3FE26B72BC000ECF3FF /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				F2EFF3FF26B72BE800ECF3FF /* GameSceneViewTests.swift */,
 				F2EFF40326B73EDC00ECF3FF /* GameOverViewTests.swift */,
 			);
 			path = Game;
@@ -460,7 +482,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F29374E926CB5DA9007D21C8 /* GameSceneTests.swift in Sources */,
+				899B169C26D2A5C00096DB85 /* SKPhysicsBody+ExtensionsTests.swift in Sources */,
 				F29374F026CCB028007D21C8 /* StartFinishLineNodeTests.swift in Sources */,
+				899B169E26D2A8AC0096DB85 /* TrackNodeTests.swift in Sources */,
+				89934E6126D213E300BA069C /* PhysicsContactDelegateTests.swift in Sources */,
 				F29374EE26CCAAFF007D21C8 /* CarNodeTests.swift in Sources */,
 				F2C2636D26B8E8050041FE0D /* GameViewCoordinatorTests.swift in Sources */,
 			);
@@ -473,7 +498,6 @@
 				F2EFF40226B72DB400ECF3FF /* AccId.swift in Sources */,
 				F2A57F3C26B39990002080A7 /* MainMenuViewUITests.swift in Sources */,
 				F2EFF40426B73EDC00ECF3FF /* GameOverViewTests.swift in Sources */,
-				F2EFF40026B72BE800ECF3FF /* GameSceneViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
