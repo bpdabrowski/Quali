@@ -8,19 +8,29 @@
 import SpriteKit
 import Combine
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene {
     
     let isGameOver = PassthroughSubject<Bool, Never>()
-    var car: CarNode!
+    private var car: CarNode!
+    private var contactDelegate: PhysicsContactDelegate!
     
     override func didMove(to view: SKView) {
-        self.physicsWorld.contactDelegate = self
+        self.contactDelegate = PhysicsContactDelegate(isGameOver: self.isGameOver)
+        self.physicsWorld.contactDelegate = contactDelegate
         
-        let startFinishLine = self.childNode(withName: "//StartFinishLine") as! StartFinishLineNode
-        startFinishLine.setupNode()
-        self.car = CarNode(startingPosition: CGPoint(x: startFinishLine.position.x - 20,
-                                                     y: startFinishLine.position.y - 50))
+        var startFinishLine: StartFinishLineNode!
+        self.enumerateChildNodes(withName: "//*") { node, _  in
+            if let trackNode = node as? TrackNode {
+                trackNode.setupNode(for: trackNode.name!)
+            } else if let startFinishLineNode = node as? StartFinishLineNode {
+                startFinishLineNode.setupNode()
+                startFinishLine = startFinishLineNode
+            }
+        }
+        
+        self.car = CarNode(startingPosition: startFinishLine.startPosition)
         self.addChild(self.car)
+        
         self.setupCamera()
         
         #if DEBUG
@@ -28,11 +38,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         #endif
     }
     
-    func didBegin(_ contact: SKPhysicsContact) {
-        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        if collision == PhysicsCategory.Car | PhysicsCategory.StartFinishLine {
-            print("Quali Started")
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            print("Unable to get touch.")
+            return
         }
+        self.car.move(target: touch.location(in: self))
     }
     
     private func setupCamera() {
@@ -43,4 +54,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let playerConstraint = SKConstraint.distance(zeroDistance, to: self.car)
         camera.constraints = [playerConstraint]
     }
+    
+    #if DEBUG
+    func getContactDelegate() -> PhysicsContactDelegate {
+        return self.contactDelegate!
+    }
+    #endif
 }

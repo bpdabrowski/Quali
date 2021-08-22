@@ -10,6 +10,7 @@ import Foundation
 struct PhysicsCategory {
     static let None: UInt32 = 0
     static let All: UInt32 = 0xFFFFFFFF
-    static let Car: UInt32 = 0b1 // 1
-    static let StartFinishLine: UInt32 = 0b10 // 2
+    static let Car: UInt32 = 0b1
+    static let StartFinishLine: UInt32 = 0b10
+    static let TrackBoundary: UInt32 = 0b100
 }

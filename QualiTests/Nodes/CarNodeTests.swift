@@ -23,7 +23,7 @@ class CarNodeTests: XCTestCase {
         XCTAssertFalse(pb.allowsRotation)
         XCTAssertFalse(pb.affectedByGravity)
         XCTAssertEqual(pb.categoryBitMask, PhysicsCategory.Car)
-        XCTAssertEqual(pb.contactTestBitMask, PhysicsCategory.StartFinishLine)
+        XCTAssertEqual(pb.contactTestBitMask, PhysicsCategory.StartFinishLine | PhysicsCategory.TrackBoundary)
         XCTAssertEqual(pb.collisionBitMask, PhysicsCategory.None)
     }
 }
