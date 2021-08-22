@@ -15,12 +15,10 @@ class StartFinishLineNode: SKSpriteNode {
     }
     
     func setupNode() {
-        self.zPosition = ZPosition.startFinishLine
+        self.zPosition = ZPosition.trackElement
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         if let physicsBody = self.physicsBody {
-            physicsBody.affectedByGravity = false
-            physicsBody.allowsRotation = false
-            physicsBody.isDynamic = false
+            physicsBody.staticBody()
             physicsBody.categoryBitMask = PhysicsCategory.StartFinishLine
             physicsBody.collisionBitMask = PhysicsCategory.None
         }

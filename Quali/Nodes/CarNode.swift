@@ -10,7 +10,7 @@ import SpriteKit
 class CarNode: SKSpriteNode {
     
     enum PlayerSettings {
-        static let playerSpeed: CGFloat = 280.0
+        static let playerSpeed: CGFloat = 1000.0
     }
     
     init(startingPosition: CGPoint) {
@@ -26,7 +26,7 @@ class CarNode: SKSpriteNode {
             physicsBody.allowsRotation = false
             physicsBody.affectedByGravity = false
             physicsBody.categoryBitMask = PhysicsCategory.Car
-            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine | PhysicsCategory.InnerBoundary | PhysicsCategory.OuterBoundary
+            physicsBody.contactTestBitMask = PhysicsCategory.StartFinishLine | PhysicsCategory.TrackBoundary
             physicsBody.collisionBitMask = PhysicsCategory.None
         }
     }

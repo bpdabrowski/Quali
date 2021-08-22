@@ -10,27 +10,12 @@ import SpriteKit
 class TrackNode: SKSpriteNode {
     
     func setupNode(for imageName: String) {
-        self.zPosition = ZPosition.track
         self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: imageName), size: self.size)
+        self.zPosition = ZPosition.trackElement
         if let physicsBody = self.physicsBody {
-            physicsBody.affectedByGravity = false
-            physicsBody.allowsRotation = false
-            physicsBody.isDynamic = false
+            physicsBody.staticBody()
             physicsBody.collisionBitMask = PhysicsCategory.None
+            physicsBody.categoryBitMask = PhysicsCategory.TrackBoundary
         }
-    }
-}
-
-class InnerBoundaryNode: TrackNode {
-    override func setupNode(for imageName: String) {
-        super.setupNode(for: imageName)
-        self.physicsBody?.categoryBitMask = PhysicsCategory.InnerBoundary
-    }
-}
-
-class OuterBoundaryNode: TrackNode {
-    override func setupNode(for imageName: String) {
-        super.setupNode(for: imageName)
-        self.physicsBody?.categoryBitMask = PhysicsCategory.OuterBoundary
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89934E5D26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */; };
 		89D470A426D0B7E30007034B /* PhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */; };
 		F2099232266332F500DD3B1E /* QualiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099231266332F500DD3B1E /* QualiApp.swift */; };
 		F2099234266332F500DD3B1E /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2099233266332F500DD3B1E /* MainMenuView.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+Extensions.swift"; sourceTree = "<group>"; };
 		89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsContactDelegate.swift; sourceTree = "<group>"; };
 		F209922E266332F500DD3B1E /* Quali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2099231266332F500DD3B1E /* QualiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualiApp.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				F298FEC226C4C34C0003A4AF /* PhysicsCategory.swift */,
 				F220F62426C61A880040D1C0 /* ZPosition.swift */,
 				89D470A326D0B7E30007034B /* PhysicsContactDelegate.swift */,
+				89934E5C26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				F29374F226CCB746007D21C8 /* TrackNode.swift in Sources */,
 				F293818C26BF22FB00BD4C89 /* Vector3.swift in Sources */,
 				F2099232266332F500DD3B1E /* QualiApp.swift in Sources */,
+				89934E5D26D1EE1000BA069C /* SKPhysicsBody+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Quali/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T6B5WZ44S;
@@ -622,6 +627,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BDCreative.Quali;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -632,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Quali/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T6B5WZ44S;
@@ -644,6 +651,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BDCreative.Quali;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
