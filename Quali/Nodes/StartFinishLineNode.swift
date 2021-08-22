@@ -18,7 +18,7 @@ class StartFinishLineNode: SKSpriteNode {
         self.zPosition = ZPosition.trackElement
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         if let physicsBody = self.physicsBody {
-            physicsBody.staticBody()
+            physicsBody.makeStatic()
             physicsBody.categoryBitMask = PhysicsCategory.StartFinishLine
             physicsBody.collisionBitMask = PhysicsCategory.None
         }

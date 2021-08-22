@@ -12,7 +12,7 @@ class GameScene: SKScene {
     
     let isGameOver = PassthroughSubject<Bool, Never>()
     private var car: CarNode!
-    private var contactDelegate: PhysicsContactDelegate?
+    private var contactDelegate: PhysicsContactDelegate!
     
     override func didMove(to view: SKView) {
         self.contactDelegate = PhysicsContactDelegate(isGameOver: self.isGameOver)

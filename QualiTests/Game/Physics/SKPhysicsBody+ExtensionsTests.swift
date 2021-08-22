@@ -13,7 +13,7 @@ class SKPhysicsBody_ExtensionsTests: XCTestCase {
 
     func testStaticBody() {
         let physicsBody = SKPhysicsBody()
-        physicsBody.staticBody()
+        physicsBody.makeStatic()
         XCTAssertFalse(physicsBody.affectedByGravity)
         XCTAssertFalse(physicsBody.allowsRotation)
         XCTAssertFalse(physicsBody.isDynamic)

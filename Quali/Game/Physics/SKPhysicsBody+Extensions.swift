@@ -9,7 +9,7 @@ import SpriteKit
 
 extension SKPhysicsBody {
     
-    func staticBody() {
+    func makeStatic() {
         self.affectedByGravity = false
         self.allowsRotation = false
         self.isDynamic = false

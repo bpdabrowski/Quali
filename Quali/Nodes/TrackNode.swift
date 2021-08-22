@@ -13,7 +13,7 @@ class TrackNode: SKSpriteNode {
         self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: imageName), size: self.size)
         self.zPosition = ZPosition.trackElement
         if let physicsBody = self.physicsBody {
-            physicsBody.staticBody()
+            physicsBody.makeStatic()
             physicsBody.collisionBitMask = PhysicsCategory.None
             physicsBody.categoryBitMask = PhysicsCategory.TrackBoundary
         }
